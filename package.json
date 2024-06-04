@@ -1,6 +1,6 @@
 {
   "name": "@tomjs/vite-plugin-target",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make Vite support Electron, Node.js, etc.",
   "main": "./index.js",
   "module": "./index.mjs",
