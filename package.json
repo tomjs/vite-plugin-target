@@ -12,7 +12,7 @@
       "types": "./types/index.d.ts"
     }
   },
-  "repository": "https://github.com/vite-plugin/vite-plugin-target.git",
+  "repository": "https://github.com/tomjs/vite-plugin-target.git",
   "author": "草鞋没号 <308487730@qq.com>",
   "license": "MIT",
   "scripts": {
