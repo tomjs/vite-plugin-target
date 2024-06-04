@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import target from 'vite-plugin-target'
+import target from '@tomjs/vite-plugin-target'
 
 // https://vitejs.dev/config/
 export default defineConfig({

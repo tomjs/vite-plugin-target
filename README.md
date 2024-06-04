@@ -1,26 +1,33 @@
-# vite-plugin-target
+# @tomjs/vite-plugin-target
 
 Make Vite support Electron, Node.js, etc.
 
-[![NPM version](https://img.shields.io/npm/v/vite-plugin-target.svg)](https://npmjs.com/package/vite-plugin-target)
-[![NPM Downloads](https://img.shields.io/npm/dm/vite-plugin-target.svg)](https://npmjs.com/package/vite-plugin-target)
+[![NPM version](https://img.shields.io/npm/v/@tomjs/vite-plugin-target)](https://npmjs.com/package/@tomjs/vite-plugin-target) ![NPM](https://img.shields.io/npm/l/@tomjs/release-cli)
+
+This library just fixes the types issue of [vite-plugin-target](https://github.com/vite-plugin/vite-plugin-target)
 
 ## Install
 
 ```sh
-npm i -D vite-plugin-target
+# pnpm
+pnpm add @tomjs/vite-plugin-target -D
+
+# yarn
+yarn add @tomjs/vite-plugin-target -D
+
+# npm
+npm add @tomjs/vite-plugin-target -D
 ```
 
 ## Examples
 
-- [electron](https://github.com/vite-plugin/vite-plugin-target/tree/main/examples/electron) - with [Vite](https://vitejs.dev/).
-- [electron-forge](https://github.com/vite-plugin/vite-plugin-target/tree/main/examples/electron-forge) - with Electron's official [forge](https://www.electronforge.io/) scaffold.
-- [vite-electron-plugin](https://github.com/vite-plugin/vite-plugin-target/tree/main/examples/vite-electron-plugin) - with [vite-electron-plugin](https://github.com/electron-vite/vite-electron-plugin).
+- [electron](https://github.com/tomjs/vite-plugin-target/tree/main/examples/electron) - with [Vite](https://vitejs.dev/).
+- [vite-electron-plugin](https://github.com/tomjs/vite-plugin-target/tree/main/examples/vite-electron-plugin) - with [vite-electron-plugin](https://github.com/electron-vite/vite-electron-plugin).
 
 ## Usage
 
 ```js
-import target from 'vite-plugin-target'
+import target from '@tomjs/vite-plugin-target'
 
 // Electron Renderer
 export default {
@@ -68,20 +75,19 @@ export interface NodeOptions {
   /**
    * Pass to `config.esbuild.target`
    */
-  version?: string
+  version?: string;
 }
 
 export interface ElectronOptions extends NodeOptions {
-  nodeIntegration?: boolean
+  nodeIntegration?: boolean;
 }
 
 export type Options =
   | { node: NodeOptions }
   | { 'electron-main': NodeOptions }
   | { 'electron-preload': ElectronOptions }
-  | { 'electron-renderer': ElectronOptions }
+  | { 'electron-renderer': ElectronOptions };
 ```
-
 
 ## How to work?
 
